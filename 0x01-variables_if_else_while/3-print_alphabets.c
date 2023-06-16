@@ -9,24 +9,24 @@
  */
 int main(void)
 {
-        char ch;
-        char CH;
+	char ch;
+	char CH;
 
-        ch = 'a';
-        while (ch <= 'z')
-        {
-                putchar(ch);
-                ch++;
-        }
+	ch = 'a';
+	while (ch <= 'z')
+	{
+		putchar(ch);
+		ch++;
+	}
 
-        CH = 'A';
-        while (CH <= 'Z')
-        {
-                putchar(CH);
-                CH++;
-        }
+	CH = 'A';
+	while (CH <= 'Z')
+	{
+		putchar(CH);
+		CH++;
+	}
 
-        putchar('\n');
+	putchar('\n');
 
-        return (0);
+	return (0);
 }
