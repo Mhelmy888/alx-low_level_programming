@@ -9,24 +9,27 @@
  */
 int main(void)
 {
-        char ch;
-        char CH;
+	int i;
 
-        ch = 'a';
-        while (ch <= 'z')
-        {
-                putchar(ch);
-                ch++;
-        }
+	/* Print lowercase alphabet */
+	for (i = 0; i < 26; i++)
+	{
+		char lowercase = 'a' + i;
+		putchar(lowercase);
+	}
 
-        CH = 'A';
-        while (CH <= 'Z')
-        {
-                putchar(CH);
-                CH++;
-        }
+	/* Print a newline */
+	putchar('\n');
 
-        putchar('\n');
+	/* Print uppercase alphabet */
+	for (i = 0; i < 26; i++)
+	{
+		char uppercase = 'A' + i;
+		putchar(uppercase);
+	}
 
-        return (0);
+	/* Print a newline */
+	putchar('\n');
+
+	return (0);
 }
