@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/**
+ /**
  * main - Entry point
  *
  * Description: Prints the lowercase alphabets from 'a' to 'z' using a for loop
