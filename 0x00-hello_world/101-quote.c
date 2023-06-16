@@ -1,21 +1,16 @@
-#!/bin/bash
+#include <unistd.h>
 
-# Get the C file name from the $CFILE environment variable
-c_file=$CFILE
+/**
+ * main - Entry point
+ *
+ * Description: Prints a quote using the write function
+ *
+ * Return: 1 (error)
+ */
+int main(void)
+{
+	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-# Check if the C file exists
-if [ ! -f "$c_file" ]; then
-    echo "C file '$c_file' does not exist."
-    exit 1
-fi
-
-# Generate the assembly code using gcc
-gcc -S -masm=intel "$c_file" -o "${c_file%.c}.s"
-
-# Check if the assembly code generation was successful
-if [ $? -eq 0 ]; then
-    echo "Assembly code generated successfully. Output file: ${c_file%.c}.s"
-else
-    echo "Failed to generate assembly code."
-fi
-
+	write(1, quo, 59);
+	return (1);
+}
