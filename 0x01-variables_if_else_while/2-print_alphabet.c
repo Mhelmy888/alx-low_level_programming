@@ -3,18 +3,17 @@
 /**
  * main - Entry point
  *
- * Description: Print all alphabet letters.
+ * Description: Prints the lowercase alphabets from 'a' to 'z' using a for loop
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char ch = 'a';
+	char ch;
 
-	while (ch <= 'z')
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		putchar(ch);
-		ch++;
 	}
 	putchar('\n');
 
