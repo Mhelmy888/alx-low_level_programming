@@ -3,23 +3,27 @@
 /**
  * main - Entry point
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int i, num1 = 1, num2 = 2, next;
+	int fib1 = 1;
+	int fib2 = 2;
+	int fib3;
+	int sum = 2;
 
-    printf("%d, %d", num1, num2);
+	while (fib3 <= 4000000)
+	{
+		fib3 = fib1 + fib2;
 
-    for (i = 3; i <= 50; i++)
-    {
-        next = num1 + num2;
-        printf(", %d", next);
-        num1 = num2;
-        num2 = next;
-    }
+		if (fib3 % 2 == 0)
+			sum += fib3;
 
-    printf("\n");
+		fib1 = fib2;
+		fib2 = fib3;
+	}
 
-    return (0);
+	printf("%d\n", sum);
+
+	return (0);
 }
