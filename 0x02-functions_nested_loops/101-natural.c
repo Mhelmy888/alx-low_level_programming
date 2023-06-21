@@ -1,24 +1,39 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0
+ * print_times_table - Prints the times table of the input.
+ * @n: The value of the times table to be printed.
  */
-int main(void)
+void print_times_table(int n)
 {
-    int i;
-    int sum = 0;
+	if (n < 0 || n > 15)
+		return;
 
-    for (i = 0; i < 1024; i++)
-    {
-        if (i % 3 == 0 || i % 5 == 0)
-        {
-            sum += i;
-        }
-    }
+	int num, mult, prod;
 
-    printf("%d\n", sum);
+	for (num = 0; num <= n; num++)
+	{
+		for (mult = 1; mult <= n; mult++)
+		{
+			prod = num * mult;
 
-    return (0);
+			if (prod <= 9)
+			{
+				printf("  %d", prod);
+			}
+			else if (prod <= 99)
+			{
+				printf(" %d", prod);
+			}
+			else
+			{
+				printf("%d", prod);
+			}
+
+			if (mult < n)
+				printf(",");
+		}
+
+		printf("\n");
+	}
 }
