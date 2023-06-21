@@ -3,23 +3,25 @@
 /**
  * main - Entry point
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int i, num1 = 1, num2 = 2, next;
+	int i;
+	long fib1 = 1, fib2 = 2, fib3;
 
-    printf("%d, %d", num1, num2);
+	printf("%ld, %ld", fib1, fib2);
 
-    for (i = 3; i <= 50; i++)
-    {
-        next = num1 + num2;
-        printf(", %d", next);
-        num1 = num2;
-        num2 = next;
-    }
+	for (i = 3; i <= 50; i++)
+	{
+		fib3 = fib1 + fib2;
+		printf(", %ld", fib3);
 
-    printf("\n");
+		fib1 = fib2;
+		fib2 = fib3;
+	}
 
-    return (0);
+	printf("\n");
+
+	return (0);
 }
