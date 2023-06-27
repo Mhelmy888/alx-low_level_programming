@@ -5,7 +5,7 @@
  * @str: Pointer to the string
  *
  * Description: This function iterates through the string and prints every other
- * character, starting with the first character, until it reaches the null terminator.
+ *              character, starting with the first character, until it reaches the null terminator.
  */
 void puts2(char *str)
 {
