@@ -3,7 +3,10 @@
 /**
  * puts2 - Prints every other character of a string
  * @str: The string to be treated
- * Return: void
+ *
+ * Description: This function iterates through the string and prints every other
+ *              character, starting with the first character, until it reaches
+ *              the null terminator.
  */
 void puts2(char *str)
 {
